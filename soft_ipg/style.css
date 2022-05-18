@@ -1,0 +1,305 @@
+/* CSS Document */
+
+
+* { margin: 0; padding: 0; }
+
+body {
+	background: url(imagini/bg.gif);
+	font: 70%/1.5em Verdana, Tahoma, arial, sans-serif;
+	color: #011e25; 
+	text-align: center;
+}
+
+/**********************************************DIVURI************************************************/ 
+#pagina {
+	width: 820px;
+	margin: 0 auto;
+	text-align: left;
+	background-repeat: repeat-y;
+	background-position: center top;
+}
+#mijloc
+{
+	background-image:url(imagini/continut.png);
+	width: 820px;
+	margin: 0 auto;
+	text-align: left;
+	background-repeat: repeat-y;
+	background-position: center top;
+}
+#continut {
+	clear: both;
+	width: 760px;
+	padding: 0; 
+	margin: 10px auto;
+}
+#header {
+	width: 820px;
+	position: relative;
+	height: 358px;/*103px;*/
+	background:  url(imagini/header.png) no-repeat center top;  
+	padding: 0;	
+	color: #FFFFFF;
+	/* font-size: 14px; */
+}
+
+#footer {
+	color: #C6DDEE;
+	background:  url(imagini/footer.png) no-repeat center top; /*#CCC*/
+	clear: both;
+	width: 820px;
+	height: 65px;
+	text-align: center;	
+	font-size: 92%;	
+}
+#footer a { 
+	color: #FFFFFFF;
+	text-decoration: none; 
+}
+
+
+/* Stanga*/	
+#stanga {
+	float: left;
+	width: 26.5%;
+	padding: 0; margin: 0;	
+	color: #195A6A;	
+}	
+#stanga h1 {
+	margin-top: 10px;
+	padding: 5px 5px; 
+	font: bold 1.4em 'Trebuchet MS', Tahoma, Sans-serif;
+	color: #FFFFFF;/*#5f7917;*/	
+	background-image:url(imagini/h1.png);
+	background-repeat:no-repeat;
+	text-align:center;
+}
+#stanga ul.submeniu {
+	list-style: none;
+	text-align: left;
+	margin: 7px 4px 8px 0; padding: 0;
+	text-decoration: none;		
+	background: url(imagini/dots.jpg) repeat-x left top;
+}
+#stanga ul.submeniu li {
+	list-style: none;
+	background: url(imagini/dots.jpg) repeat-x left bottom;
+	padding: 4px 0 4px 5px;
+	margin: 0 2px;	
+	color: #195A6A;	
+}
+
+#stanga ul.submeniu li a {
+	text-decoration: none;	
+	background-image: none;	
+	color: #022831;			
+}
+#stanga ul.submeniu li a:hover {	
+	color: #5f7917;/*#022831;*/	
+}
+
+/* Dreapta */
+#dreapta {
+	float: right;
+	width: 70%;
+	padding: 0; margin: 0 0 0 5px;
+	display: inline;
+}
+
+#dreapta h1 {
+	margin-top: 10px;
+	font: Bold 140% 'Trebuchet MS', Tahoma, Sans-serif;
+	color: #185A6A; 
+	padding: 5px 0 5px 25px; 	
+	border-bottom: 1px solid #EFF0F1;
+	background: #FFFFFF url(imagini/patrat.png) no-repeat 3px 50%;	
+}
+
+/* meniu */
+#meniu {
+	clear: both;	
+	margin: 0 auto; padding: 0;
+	background: url(imagini/meniu.png) repeat-x 0 0;	
+	font: bold 12px/37px Verdana, Arial, Tahoma, Sans-serif;
+	height: 37px;
+	width: 780px;	
+}
+#meniu ul {
+	float: right;
+	list-style: none;
+	margin:0; padding: 0;
+}
+#meniu ul li {
+	display: inline;
+}
+#meniu ul li a {
+	display: block;
+	float: left;
+	padding: 0 10px;
+	color: #FFFFFF;	
+	text-decoration: none;
+}
+
+#meniu ul li a:hover {
+	color: #D4E59F;	
+}
+#meniu ul li#current a {	
+	color: #D4E59F;
+}
+
+/*******************************************************************************************PARAGRAF*********************/
+.definitie{
+	color:#CC0000;
+	font-weight:200px;
+	background: #FFFFFF url(imagini/patratr.png) no-repeat 3px 50%;	
+	margin-top: 10px;
+	padding: 5px 0 5px 25px; 	
+}
+
+
+
+/* aliniere */
+.float-left  { float: left; }
+.float-right { float: right; }
+.align-left  { text-align: left; }
+.align-right { text-align: right; }
+.clear { clear: both; }
+
+
+/* links */
+a, a:visited {
+	text-decoration: none;
+	color: #2180BC;
+	background: inherit;
+}
+a:hover {
+	color: #88ac0b;
+	background: inherit;
+	text-decoration: underline;
+}
+
+/* headers */
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', Tahoma, Sans-serif;
+	font-weight: Bold; 		
+}
+h1 {
+	font-size: 130%;	
+}
+h2 {
+	font-size: 120%;
+	text-transform: uppercase;
+	color: #88ac0b;
+}
+h3 {
+	font-size: 120%;
+	color: #666666; 
+}
+
+/* images */
+/*img {
+	background: #FAFAFA;
+    border: 1px solid #E5E5E5;
+	padding: 5px;
+}
+img.float-right {
+  margin: 5px 0px 10px 10px;  
+}
+img.float-left {
+  margin: 5px 10px 10px 0px;
+}
+*/
+h1, h2, h3, p {
+	padding: 10px;		
+	margin: 0;
+
+}
+ul, ol {
+	margin: 5px 20px;
+	padding: 0 20px;
+}
+ul li {
+	list-style-image: url(imagini/bullet.gif);
+}
+
+code {
+  margin: 5px 0;
+  padding: 10px;
+  text-align: left;
+  display: block;
+  overflow: auto;  
+  font: 500 1em/1.5em 'Lucida Console', 'courier new', monospace ;
+  /* white-space: pre; */
+  background: #FAFAFA;
+  border: 1px solid #f2f2f2;  
+}
+
+/*******************************************************************************Pas cu pas********************************/
+.buton{
+	background-image:url(imagini/btn.png);
+	height:25px;
+	width:120px;
+	color:#FFFFFF;
+}
+
+.monitor{
+	float: left;
+	width: 250px;
+	height:199px;
+	padding: 0; margin: 0 0 0 5px;
+	display: inline;
+	background: url(imagini/monitor.png) no-repeat 3px 50%;	
+}
+
+.tbmonitor{
+	margin-top:20px;
+	background-color:#000000;
+	color:#FFFFFF;
+	width:100px;
+}
+
+.lbl{
+	color:#FFFFFF;
+}
+
+.algoritm{
+	float: left;
+	width: 250px;
+}
+.algoritm p{
+	margin: 0;
+	padding-top: .15em;
+	padding-bottom: .15em;
+
+}
+.evaluare{
+	float: left;
+	width: 250px;
+	height:199px;
+	padding: 0; margin: 0 0 0 5px;
+	display: inline;
+	/*background: #234567 no-repeat 3px 50%;	*/
+}
+.teval_dr
+{
+	border-right:#185A6A;
+	border-right-width:thin;
+	border-right-style:solid;
+	text-align:center;
+}
+.teval_jos
+{
+	border-bottom:#185A6A;
+	border-bottom-width:thin;
+	border-bottom-style:solid;
+	text-align:center;
+}
+
+.btnenter
+{
+	background-image:url(imagini/key-enter.png);
+	width:50px;
+	height:28px;
+	margin-top:10px;
+}
+

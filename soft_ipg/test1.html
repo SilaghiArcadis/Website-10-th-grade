@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p> &lt;script&gt;<br />
+  var raspuns=new Array;<br />
+  var s=new Array();<br />
+  var nota=1;<br />
+  function curata()<br />
+  {<br />
+  for(i=0;i&lt;9;i++)<br />
+  {<br />
+  for(j=0;j&lt;3;j++)<br />
+  {<br />
+  id=&quot;rb&quot;+i+j+&quot;&quot;;<br />
+  document.getElementById(id).checked=false;<br />
+  id=&quot;i&quot;+i+String.fromCharCode(j+97);<br />
+  document.getElementById(id).src=&quot;imagini/gol.gif&quot;;<br />
+  document.getElementById(&quot;ea&quot;+i).innerHTML=&quot;&quot;;<br />
+  document.getElementById(&quot;eb&quot;+i).innerHTML=&quot;&quot;;<br />
+  document.getElementById(&quot;ec&quot;+i).innerHTML=&quot;&quot;;<br />
+  }<br />
+  }<br />
+  document.getElementById(&quot;nota&quot;).innerHTML=&quot;nefinalizat&quot;;<br />
+  }<br />
+  function incearca()<br />
+  {<br />
+  s=genereaza();<br />
+  curata();<br />
+  for(i=0;i&lt;9;i++)<br />
+  {<br />
+  raspuns[i]=&quot;-&quot;;<br />
+  document.getElementById(&quot;in&quot;+i).innerHTML=intr[eval(s[i])];<br />
+  document.getElementById(&quot;va&quot;+i).innerHTML=va[eval(s[i])];<br />
+  document.getElementById(&quot;vb&quot;+i).innerHTML=vb[eval(s[i])];<br />
+  document.getElementById(&quot;vc&quot;+i).innerHTML=vc[eval(s[i])];<br />
+  }<br />
+  document.getElementById(&quot;btncor&quot;).disabled=&quot;&quot;;<br />
+  }</p>
+<p>function alege(i,j)<br />
+  { <br />
+  id=&quot;rb&quot;+i+j+&quot;&quot;;<br />
+  raspuns[i]=document.getElementById(id).value;<br />
+  }<br />
+  function sugestie(i,j)<br />
+  {<br />
+  if(i=='a')<br />
+  return ea[j];<br />
+  if(i=='b')<br />
+  return eb[j];<br />
+  if(i=='c')<br />
+  return ec[j];<br />
+  }<br />
+  function corecteaza()<br />
+  {<br />
+  nota=1;<br />
+  var alese=&quot;&quot;;<br />
+  for(i=0;i&lt;9;i++)<br />
+  {<br />
+  if(raspuns[i]=='-')continue;<br />
+  x=corect.substring(eval(s[i]),eval(s[i]+1))<br />
+  y=raspuns[i]<br />
+  if(x==y)<br />
+  {<br />
+  nota++;<br />
+  document.getElementById(&quot;i&quot;+i+raspuns[i]).src=&quot;imagini/ok.gif&quot;;<br />
+  }<br />
+  else<br />
+  document.getElementById(&quot;i&quot;+i+raspuns[i]).src=&quot;imagini/ko.gif&quot;;<br />
+  document.getElementById(&quot;e&quot;+raspuns[i]+i).innerHTML=sugestie(raspuns[i],eval(s[i]));<br />
+  <br />
+  }<br />
+  document.getElementById(&quot;nota&quot;).innerHTML=&quot;Ai obtinut nota &quot;+nota;<br />
+  document.getElementById(&quot;btncor&quot;).disabled=&quot;disabled&quot;;<br />
+  }<br />
+  &lt;/script&gt;</p>
+<p> &lt;script&gt;(function() {with (this[2]) {with (this[1]) {with (this[0]) {return function(event) {incearca()<br />
+  };}}}})&lt;/script&gt;</p>
+</body>
+</html>

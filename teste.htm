@@ -1,0 +1,467 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="sytle.css">
+
+<title>1945 </title>
+    <link href="themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="themes/1/js-image-slider.js" type="text/javascript"></script>
+    <link href="generic.css" rel="stylesheet" type="text/css" />
+	<script src="teste/t1.js" type=text/javascript></script>
+<script type="text/javascript">
+var raspuns=new Array;
+var s=new Array();
+var nota=1;
+function curata()
+{
+	for(i=0;i<9;i++)
+	{
+		for(j=0;j<3;j++)
+		{
+			id="rb"+i+j+"";
+			document.getElementById(id).checked=false;
+			id="i"+i+String.fromCharCode(j+97);
+			document.getElementById(id).src="imagini/gol.gif";
+			document.getElementById("ea"+i).innerHTML="";
+			document.getElementById("eb"+i).innerHTML="";
+			document.getElementById("ec"+i).innerHTML="";
+		}
+	}
+	document.getElementById("nota").innerHTML="nefinalizat";
+}
+function incearca()
+{
+	s=genereaza();
+	curata();
+	for(i=0;i<9;i++)
+	{
+		raspuns[i]="-";
+		document.getElementById("in"+i).innerHTML=intr[eval(s[i])];
+		document.getElementById("va"+i).innerHTML=va[eval(s[i])];
+		document.getElementById("vb"+i).innerHTML=vb[eval(s[i])];
+		document.getElementById("vc"+i).innerHTML=vc[eval(s[i])];
+	}
+	document.getElementById("btncor").disabled="";
+}
+
+function alege(i,j)
+{	
+	id="rb"+i+j+"";
+	raspuns[i]=document.getElementById(id).value;
+}
+function sugestie(i,j)
+{
+	if(i=='a')
+		return ea[j];
+	if(i=='b')
+		return eb[j];
+	if(i=='c')
+		return ec[j];
+}
+function corecteaza()
+{
+    nota=1;
+	var alese="";
+	for(i=0;i<9;i++)
+	{
+		if(raspuns[i]=='-')continue;
+		x=corect.substring(eval(s[i]),eval(s[i]+1))
+		y=raspuns[i]
+		if(x==y)
+		{
+			nota++;
+			document.getElementById("i"+i+raspuns[i]).src="imagini/ok.gif";
+		}
+		else
+			document.getElementById("i"+i+raspuns[i]).src="imagini/ko.gif";
+		document.getElementById("e"+raspuns[i]+i).innerHTML=sugestie(raspuns[i],eval(s[i]));
+	
+	}
+	document.getElementById("nota").innerHTML="Ai obtinut nota "+nota;
+	document.getElementById("btncor").disabled="disabled";
+}
+</script>
+<style type="text/css">
+<!--
+body {
+	background-image:url(images/bg.jpg);
+	background-attachment: fixed;
+	background-position:top;
+}
+-->
+</style>
+<link href="dropDown.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onLoad="incearca()">
+<div class="container">
+  <div class="content">
+    <center>
+     <div class="div1">
+        <p>&nbsp;</p>
+        <p><img src="imagini/icons/an.png" width="167" height="63" align="center" data-original=""></p>
+        <p>&nbsp;</p>
+		<img src="imagini/icons/test.png" width="167" height="63" align="center" data-original=""></div>
+    </div>
+    <div id="sliderFrame">
+        <div id="slider">
+		
+	<!-- 	Append this section to change the images -->
+                <img src="images/test/Întălnirea de la Yalta-presa vremii-Test sau Acasa.jpg" alt="Întălnirea de la Yalta." />
+            </a>
+			
+            <img src="images/test/Europa interbelică-cauze sau test.jpg" alt="Europa interbelică" />
+            <img src="images/test/europa interbelica.jpg" alt="Europa interbelică." />
+            <img src="images/test/harta-interbelica-a-romaniei-detaliu-2.jpg" alt="Harta interbelica a Romaniei ." />
+            <img src="images/test/political-map-of-europe.jpg" alt="Harta politica a Europei." />
+       
+	   </div>
+        <div id="htmlcaption" style="display: none;">
+            
+        </div>
+    </div>
+
+    <div class="div2">
+       
+    </div>
+    </center>
+    
+	<div id="wrapper">
+	<div id="navMenu">
+	<!-- ******************************** I ******************************* -->
+	<ul>
+	<li><a href="acasa.htm">Acasa</a>
+	</li>  <!-- end main LI -->
+	</ul>  <!--end main UL -->
+	<!-- ******************************** II ******************************* -->
+	<ul>
+	<li><a href="">Război</a>
+	<ul>
+	<li><a href="cauze.htm">Cauze</a></li>
+	<li><a href="1939.htm">1939</a></li>
+	<li><a href="1940.htm">1940</a></li>
+	<li><a href="1941.htm">1941</a></li>
+	<li><a href="1942.htm">1942</a></li>
+	<li><a href="1943.htm">1943</a></li>
+	<li><a href="1944.htm">1944</a></li>
+	
+	</ul>  <!-- end inner UL -->
+	</li>  <!-- end main LI -->
+	</ul>  <!--end main UL -->
+	<!-- ********************************* III ******************************* -->
+	<ul>
+	<li><a href="1945.htm">1945</a>
+	<ul>
+	<li><a href="lagare.htm">Lagare... </a>
+	</ul>  <!-- end inner UL -->
+	</li>  <!-- end main LI -->
+	</ul>  <!--end main UL -->
+	<!-- ******************************** IV ******************************* -->
+	<ul>
+	<li><a href="nurenberg.htm">P.Nurenberg</a>
+	</li>  <!-- end main LI -->
+	</ul>  <!--end main UL -->
+	<!-- ******************************** VI ******************************* -->
+	<ul>
+	<li><a href="impartirea.htm">Împărţire</a>
+	<ul>
+	<li><a href="romania.htm">Romania </a>
+	</ul>  <!-- end inner UL -->
+	</li>  <!-- end main LI -->
+	</ul>  <!--end main UL -->
+	<!-- ******************************** VII ******************************* -->
+
+	<!-- ******************************** VIII ******************************* -->
+	<ul>
+	<li><a href="teste.htm">Teste</a>
+	</li>  <!-- end main LI -->
+	</ul>  <!--end main UL -->
+	<!-- ******************************** IX ******************************* -->
+	<center>
+		<ul>
+		<li><a href="Bibliografie.htm">Bibliografie</a>
+		</li>  <!-- end main LI -->
+		</ul>  <!--end main UL -->
+	</center>
+	<!-- ******************************** END ******************************* -->
+	
+	
+	<br class="clearFloat" />
+	
+	</div> <!-- end navMenu div -->
+	</div>
+	<p>&nbsp;</p>
+	
+	<h1>Test</h1>
+     
+       <p>Citi&#355;i cu aten&#355;ie &icirc;ntreb&#259;rile de mai jos &#351;i  alege&#355;i r&#259;spunsul corect. Dup&#259; ce a&#355;i r&#259;spuns la toate &icirc;ntreb&#259;rile ap&#259;sa&#355;i  butonul Corecteaz&#259;. Succes!</p>
+       <table width="525" border="0" align="center" cellpadding="0">
+         <tr>
+           <td  width="32">1.</td>
+           <td id="in0" colspan="3">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i0a" /></td>
+           <td  width="24"><label>
+             <input name="rb0" id="rb00" type="radio" value="a" onClick="alege(0,0)" />
+           </label></td>
+           <td id="va0" width="461">&nbsp;</td>
+           <td id="ea0" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i0b" /></td>
+           <td  width="24"><label>
+             <input name="rb0" id="rb01" type="radio" value="b" onClick="alege(0,1)"/>
+           </label></td>
+           <td id="vb0" width="461">&nbsp;</td>
+           <td id="eb0" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i0c" /></td>
+           <td  width="24"><label>
+             <input name="rb0" id="rb02" type="radio" value="c" onClick="alege(0,2)"/>
+           </label></td>
+           <td id="vc0" width="461">&nbsp;</td>
+           <td id="ec0" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td  width="32">2</td>
+           <td id="in1" colspan="3">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i1a" /></td>
+           <td  width="24"><label>
+             <input name="rb1" id="rb10" onClick="alege(1,0)" type="radio" value="a" />
+           </label></td>
+           <td id="va1" width="461">&nbsp;</td>
+           <td id="ea1" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i1b" /></td>
+           <td  width="24"><label>
+             <input name="rb1" id="rb11" onClick="alege(1,1)"  type="radio" value="b" />
+           </label></td>
+           <td id="vb1" width="461">&nbsp;</td>
+           <td id="eb1" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i1c" /></td>
+           <td  width="24"><label>
+             <input name="rb1" id="rb12" onClick="alege(1,2)"  type="radio" value="c"/>
+           </label></td>
+           <td id="vc1" width="461">&nbsp;</td>
+           <td id="ec1" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td  width="32">3</td>
+           <td id="in2" colspan="3">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i2a" /></td>
+           <td  width="24"><label>
+             <input name="rb2" id="rb20" onClick="alege(2,0)" type="radio" value="a" />
+           </label></td>
+           <td id="va2" width="461">&nbsp;</td>
+           <td id="ea2" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i2b" /></td>
+           <td  width="24"><label>
+             <input name="rb2" id="rb21" onClick="alege(2,1)" type="radio" value="b" />
+           </label></td>
+           <td id="vb2" width="461">&nbsp;</td>
+           <td id="eb2" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i2c" /></td>
+           <td  width="24"><label>
+             <input name="rb2" id="rb22" onClick="alege(2,2)" type="radio" value="c" />
+           </label></td>
+           <td id="vc2" width="461">&nbsp;</td>
+           <td id="ec2" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td  width="32">4</td>
+           <td id="in3" colspan="3">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i3a" /></td>
+           <td  width="24"><label>
+             <input name="rb3" id="rb30" onClick="alege(3,0)"  type="radio" value="a" />
+           </label></td>
+           <td id="va3" width="461">&nbsp;</td>
+           <td id="ea3" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i3b" /></td>
+           <td  width="24"><label>
+             <input name="rb3" id="rb31" onClick="alege(3,1)" type="radio" value="b" />
+           </label></td>
+           <td id="vb3" width="461">&nbsp;</td>
+           <td id="eb3" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i3c" /></td>
+           <td  width="24"><label>
+             <input name="rb3" id="rb32" onClick="alege(3,2)"  type="radio" value="c" />
+           </label></td>
+           <td id="vc3" width="461">&nbsp;</td>
+           <td id="ec3" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td  width="32">5</td>
+           <td id="in4" colspan="3">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i4a" /></td>
+           <td  width="24"><label>
+             <input name="rb4" id="rb40" onClick="alege(4,0)" type="radio" value="a" />
+           </label></td>
+           <td id="va4" width="461">&nbsp;</td>
+           <td id="ea4" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i4b" /></td>
+           <td  width="24"><label>
+             <input name="rb4"  id="rb41" onClick="alege(4,1)" type="radio" value="b" />
+           </label></td>
+           <td id="vb4" width="461">&nbsp;</td>
+           <td id="eb4" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i4c" /></td>
+           <td  width="24"><label>
+             <input name="rb4" id="rb42" onClick="alege(4,2)" type="radio" value="c" />
+           </label></td>
+           <td id="vc4" width="461">&nbsp;</td>
+           <td id="ec4" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td  width="32">6</td>
+           <td id="in5" colspan="3">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i5a" /></td>
+           <td  width="24"><label>
+             <input name="rb5" id="rb50" onClick="alege(5,0)"  type="radio" value="a" />
+           </label></td>
+           <td id="va5" width="461">&nbsp;</td>
+           <td id="ea5" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i5b" /></td>
+           <td  width="24"><label>
+             <input name="rb5" id="rb51" onClick="alege(5,1)" type="radio" value="b" />
+           </label></td>
+           <td id="vb5" width="461">&nbsp;</td>
+           <td id="eb5" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i5c" /></td>
+           <td  width="24"><label>
+             <input name="rb5" id="rb52" onClick="alege(5,2)" type="radio" value="c" />
+           </label></td>
+           <td id="vc5" width="461">&nbsp;</td>
+           <td id="ec5" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td  width="32">7</td>
+           <td id="in6" colspan="3">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i6a" /></td>
+           <td  width="24"><label>
+             <input name="rb6" id="rb60" onClick="alege(6,0)" type="radio" value="a" />
+           </label></td>
+           <td id="va6" width="461">&nbsp;</td>
+           <td id="ea6" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i6b" /></td>
+           <td  width="24"><label>
+             <input name="rb6" id="rb61" onClick="alege(6,1)"  type="radio" value="b" />
+           </label></td>
+           <td id="vb6" width="461">&nbsp;</td>
+           <td id="eb6" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i6c" /></td>
+           <td  width="24"><label>
+             <input name="rb6" id="rb62" onClick="alege(6,2)"  type="radio" value="c" />
+           </label></td>
+           <td id="vc6" width="461">&nbsp;</td>
+           <td id="ec6" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td  width="32">8</td>
+           <td id="in7" colspan="3">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i7a" /></td>
+           <td  width="24"><label>
+             <input name="rb7" id="rb70" onClick="alege(7,0)" type="radio" value="a" />
+           </label></td>
+           <td id="va7" width="461">&nbsp;</td>
+           <td id="ea7" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i7b" /></td>
+           <td  width="24"><label>
+             <input name="rb7" id="rb71" onClick="alege(7,1)" type="radio" value="b" />
+           </label></td>
+           <td id="vb7" width="461">&nbsp;</td>
+           <td id="eb7" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i7c" /></td>
+           <td  width="24"><label>
+             <input name="rb7" id="rb72" onClick="alege(7,2)"  type="radio" value="c" />
+           </label></td>
+           <td id="vc7" width="461">&nbsp;</td>
+           <td id="ec7" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td  width="32">9</td>
+           <td id="in8" colspan="3">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i8a" /></td>
+           <td  width="24"><label>
+             <input name="rb8" id="rb80" onClick="alege(8,0)" type="radio" value="a" />
+           </label></td>
+           <td id="va8" width="461">&nbsp;</td>
+           <td id="ea8" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i8b" /></td>
+           <td  width="24"><label>
+             <input name="rb8" id="rb81" onClick="alege(8,1)" type="radio" value="b" />
+           </label></td>
+           <td id="vb8" width="461">&nbsp;</td>
+           <td id="eb8" width="461">&nbsp;</td>
+         </tr>
+         <tr>
+           <td ><img src="imagini/gol.gif" id="i8c" /></td>
+           <td  width="24"><label>
+             <input name="rb8" id="rb82" onClick="alege(8,2)" type="radio" value="c" />
+           </label></td>
+           <td id="vc8" width="461">&nbsp;</td>
+           <td id="ec8" width="461">&nbsp;</td>
+         </tr>
+       </table>
+	   <p align="center">
+			      <input type="button" id="btncor" name="Submit" value="Corecteaz&#259;" onClick="corecteaza()" class="buton"/>&nbsp;&nbsp;
+                  <input type="button" id="btninc"name="Submit2" value="Incearc&#259; din nou" onClick="incearca()" class="buton"/> 
+	   </p>
+	   <div align="center">Evaluare: <span class="style3" id="nota" >nefinalizat</span></div>
+	    <p>&nbsp;</p>
+	
+  </div>
+
+
+
+					
+  </div>
+</body>
+</html>
